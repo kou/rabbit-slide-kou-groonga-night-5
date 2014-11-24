@@ -19,3 +19,62 @@
 Groonga関連の\n
 最新情報を\n
 ざっくり紹介
+
+= リーダブルコードの解説者
+
+  # image
+  # src = images/readable-code.jpeg
+  # relative_height = 95
+  # reflect_ratio = 0.1
+
+= Groonga族と私
+
+  * 開発・リリース・サポート
+    * Groonga、Mroonga、Rroonga、Droonga、他各種ツール
+  * イベント運営
+    * コレ、ドキュメント読書会
+
+= 内容
+
+  * 大事なお知らせ
+  * Groonga族の概要
+  * Groonga族の最新情報
+
+= 大事なお知らせ（1）
+
+(('tag:groonga:G'))roonga 4.0.8\n
+リリース！
+
+= 大事なお知らせ（2）
+
+(('tag:mroonga:M'))roonga 4.08\n
+リリース！
+
+= 大事なお知らせ（3）
+
+(('tag:droonga:D'))roonga 1.0.8\n
+リリース！
+
+= 豆知識（1）
+
+  * Groonga族のリリース日
+    * だいたい毎月肉の日（29日）
+    * バインディング系は1,2週間後\n
+      (('note:（例：Rroonga）'))
+  * 定期リリースのメリット
+    * 問題を報告してから修正版が\n
+      手に入るまでの時間が短い
+    * 問題を見つけたら報告して！
+
+= Groonga族の概要
+
+  * (('del:大事なお知らせ'))
+  * ((*Groonga族の概要*))
+  * Groonga族の最新情報
+
+= Groonga族
+
+  # image
+  # src = images/groonga-family.svg
+  # relative_width = 90
+
