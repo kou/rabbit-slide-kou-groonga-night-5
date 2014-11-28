@@ -9,7 +9,7 @@
 : date
    2014/11/29
 : allotted-time
-   15m
+   20m
 : theme
    groonga
 
@@ -57,9 +57,10 @@ Groonga関連の\n
 
 = 即時更新
 
-  * データ更新→索引更新
+  * データ更新時：索引も更新
     * 1つの索引を随時更新
     * ×サブ索引を作成→マージ
+    * →すぐに検索できる
   * 新鮮な情報をすぐに検索可能に
     * 大事にしていること
 
@@ -72,6 +73,7 @@ Groonga関連の\n
 
   * 索引更新中も検索可能
     * 更新処理が検索処理を阻害しない
+    * 更新中も参照可能にすることで実現
   * 定期的な重い処理がない
     * ×フルGCによるstop the world
     * ×索引のマージ
@@ -164,27 +166,239 @@ Groonga関連の\n
   * 他システムと連携
   * 定期リリース
 
+= Groonga族の概要
+
+  * (('del:Groongaの特徴'))
+  * Groonga族とは
+
+= Groonga族
+
+  * Groongaと\n
+    関連プロダクトの総称
+  * 関連プロダクト
+    * Xroonga（○るんが）\n
+      という名前が多い
+
+= 関連プロダクトの分類
+
+(('tag:center'))(('note:詳細：http://groonga.org/ja/related-projects.html'))
+
+  * データベース
+  * 言語バインディング
+  * クライアントライブラリー
+  * ユーティリティー
+
+= データベース
+
+  * 既存データベースに\n
+    全文検索機能を追加
+    * 例：MySQL→Mroonga（むるんが）
+  * 既存データベースの\n
+    インターフェイスで使える
+    * 例：SQL
+
+= 言語バインディング
+
+  * 好きな言語で全文検索機能付き\n
+    アプリケーションを書ける
+    * 例：Ruby→Rroonga（るるんが）
+  * アプリケーションがDBを開く
+    * SQLite3やDBMを使う感じ
+    * 1マシンで扱える量向き
+
+= クライアントライブラリー
+
+  * Groongaサーバーへの\n
+    アクセスを支援
+    * 例：Go→goroo（ごろう）
+  * クライアント・サーバーモデル
+    * MySQLやMongoDBを使う感じ
+    * アプリとDBでマシンを分ける構成用
+
+= ユーティリティー
+
+  * 便利ツールがいろいろある
+    * Madhand：Groongaレプリケーション\n
+      (('note:https://github.com/yappo/ruby-madhand'))
+    * groonga-query-log：\n
+      スロークエリー調査とか
+    * zshの補完関数
+    * grnline：\n
+      groongaコマンドを便利にする
+
+= 関連プロダクトの分類
+
+(('tag:center'))(('note:詳細：http://groonga.org/ja/related-projects.html'))
+
+  * データベース
+  * 言語バインディング
+  * クライアントライブラリー
+  * ユーティリティー
+
 = Groonga族の最新情報
 
   * (('del:Groonga族の概要'))
   * Groonga族の最新情報
 
-= Groonga族
+= 2013/12
 
-  * Groongaと関連プロダクトの\n
-    総称
-  * 関連プロダクト？
+  * Groonga Advent Calendar 2013
+    * (('note:http://qiita.com/advent-calendar/2013/groonga'))
+    * 今年もやるので参加してね！\n
+      (('note:http://qiita.com/advent-calendar/2014/groonga'))
+  * (({geo_in_rectangle}))が北半球\n
+    だけでなく全世界をサポート
+    * 去年のこのイベントでバグレポート
 
-= Groonga族
+= 2013/12
 
-  # image
-  # src = images/groonga-family.svg
-  # relative_width = 90
+  * (({between}))関数を追加
+    * 1 <= X && X <= 10\n
+      のような範囲クエリーを高速実行
 
-= Groonga族の概要
+= 2014/1
 
-  * (('del:大事なお知らせ'))
-  * ((*Groonga族の概要*))
+  * DBサイズ増加を抑制
+    * レコードの更新をくりかえすと\n
+      DBサイズが増えることがある
+    * 増加しにくくなった
+  * Groonga Meetup開催
+    * ハンズオン
+
+= 2014/2
+
+  * 2/9に4.0.0リリース！
+    * 年に1度の肉の日
+
+= 2014/3
+
+  * レコード毎の重み付けに対応
+    * スコアー調整に便利
+    * 例：Groongaタグがついていたら\n
+      スコアーを10倍
+    * 参照
+      * selectのadjusterオプション
+      * 重み付きベクターカラム
+
+= 2014/3
+
+  * 全文検索エンジンGroonga\n
+    勉強会＠札幌開催
+    * 3/29
+
+= 2014/4
+
+  * Groonga Meetup開催
+    * ハンズオン
+
+= 2014/5
+
+  * Ubuntuパッケージ配布URL変更
+    * LaunchpadのPPAを利用
+  * HerokuでGroongaを利用可能に
+    * Rroongaも使える\n
+      (('note:http://www.clear-code.com/blog/2014/5/28.html'))
+
+= 2014/6
+
+  * HTTPサーバーがPOST対応
+  * GQTPサーバーのデフォルト\n
+    ポート番号を変更
+    * 10041→10043
+  * プラグイン用APIを強化
+
+= 2014/6
+
+  * Try Groonga公開
+    * Webブラウザー上で\n
+      Groongaを試せる
+    * インストールいらず
+    * Heroku上で動作
+
+(('tag:center'))(('note:http://try-groonga.herokuapp.com/'))
+
+= 2014/7
+
+  * 特になし
+
+= 2014/8
+
+  * キーワードハイライト関数追加
+    * highlight_fullとhighlight_html
+  * 近傍検索記法を追加
+    * 「*N"A Z"」→Aの近くにZがある
+    * 「近く」の閾値はパラメーター
+
+= 2014/9
+
+  * mruby実装のクエリーオプティマイザーが動くようになった
+    * (('note:RubyKaigi 2014があった'))
+  * ConoHa presents -\n
+    Groonga "How-To" Talks開催
+    * (('note:http://groonga.org/ja/blog/2014/09/03/conoha-presents-groonga-how-to-talks.html'))
+
+= 2014/9
+
+  * packages.groonga.orgで\n
+    「ConoHa支援プログラム」を\n
+    利用開始
+    * https://www.conoha.jp/community
+    * ソース・パッケージ配布サイト
+
+= 2014/10
+
+  * Windowsでもmruby組込サポート
+  * トークンフィルター機能追加
+    * プラグイン対応
+    * TokenFilterStopWord：\n
+      ストップワード
+    * TokenFilterStem：\n
+      ステミング
+
+= 2014/10
+
+  * カラム圧縮サポート
+    * zlib/LZ4
+  * (({in_values}))関数を追加
+    * SQLでいう"(({カラム IN(A, B, ...)}))"
+    * だいぶ速くなる
+
+= 2014/11
+
+  * n個のキーを使った\n
+    ドリルダウンをサポート
+    * 例：ユーザーとタグでドリルダウン
+  * (({range_filter}))コマンドを追加
+    * ヒット件数は返せない代わりに高速
+    * SQLでいう(({ORDER BY LIMIT}))で\n
+      速くなるパターン用のコマンド
+
+= 2014/11
+
+  * 管理画面をリニューアル
+    * 今のところ検索画面だけ
+    * 使いやすさ重視
+    * (('note:https://github.com/groonga/groonga-admin/'))
+
+= Rroonga
+
+  * リリースチームを結成
+  * 最新Groongaをサポート
+  * メモリー使用量削減
+
+= ユーティリティー
+
+  * fluent-plugin-groonga
+    * ログをGroongaに投入可能
+    * スキーマは自動定義
+    * →Groongaサーバーを立てたら\n
+      すぐに使える
+    * (('note:Fluentdで集めたデータをGroongaに格納する方法'))\n
+      (('note:http://qiita.com/groonga/items/5c674be9daf25054c14c'))
+
+= まとめ
+
+  * Groonga族の概要
+    * Groongaの特徴
+    * Groonga族とは
   * Groonga族の最新情報
-
-
