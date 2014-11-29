@@ -45,6 +45,7 @@ Groonga関連の\n
 
   * Groonga族の概要
   * Groonga族の最新情報
+  * Groonga関連情報の見つけ方
 
 = Groonga族の概要
 
@@ -239,6 +240,7 @@ Groonga関連の\n
 
   * (('del:Groonga族の概要'))
   * Groonga族の最新情報
+  * Groonga関連情報の見つけ方
 
 = 2013/12
 
@@ -252,9 +254,10 @@ Groonga関連の\n
 
 = 2013/12
 
-  * (({between}))関数を追加
+  * (({between()}))関数を追加
     * 1 <= X && X <= 10\n
       のような範囲クエリーを高速実行
+    * SQLでいう"(({X BETWEEN 1 AND 10}))"
 
 = 2014/1
 
@@ -263,6 +266,7 @@ Groonga関連の\n
       DBサイズが増えることがある
     * 増加しにくくなった
   * Groonga Meetup開催
+    * 1/29
     * ハンズオン
 
 = 2014/2
@@ -289,6 +293,7 @@ Groonga関連の\n
 = 2014/4
 
   * Groonga Meetup開催
+    * 4/29
     * ハンズオン
 
 = 2014/5
@@ -298,6 +303,15 @@ Groonga関連の\n
   * HerokuでGroongaを利用可能に
     * Rroongaも使える\n
       (('note:http://www.clear-code.com/blog/2014/5/28.html'))
+
+= 2014/5
+
+  * Groongaドキュメント読書会1
+    * 5/15
+    * Groongaの理解を深める会
+    * 集まってドキュメントを読む
+    * 参加者が気になったところは\n
+      随時Groonga開発者（私）が図解
 
 = 2014/6
 
@@ -317,9 +331,23 @@ Groonga関連の\n
 
 (('tag:center'))(('note:http://try-groonga.herokuapp.com/'))
 
+= 2014/6
+
+  * Groongaドキュメント読書会2
+    * 6/3
+    * Groongaの理解を深める会
+    * 集まってドキュメントを読む
+    * 参加者が気になったところは\n
+      随時Groonga開発者（私）が図解
+
 = 2014/7
 
-  * 特になし
+  * Groongaドキュメント読書会3
+    * 7/23
+    * Groongaの理解を深める会
+    * 集まってドキュメントを読む
+    * 参加者が気になったところは\n
+      随時Groonga開発者（私）が図解
 
 = 2014/8
 
@@ -328,6 +356,15 @@ Groonga関連の\n
   * 近傍検索記法を追加
     * 「*N"A Z"」→Aの近くにZがある
     * 「近く」の閾値はパラメーター
+
+= 2014/8
+
+  * Groongaドキュメント読書会3
+    * 8/25
+    * Groongaの理解を深める会
+    * 集まってドキュメントを読む
+    * 参加者が気になったところは\n
+      随時Groonga開発者（私）が図解
 
 = 2014/9
 
@@ -363,6 +400,15 @@ Groonga関連の\n
     * SQLでいう"(({カラム IN(A, B, ...)}))"
     * だいぶ速くなる
 
+= 2014/10
+
+  * Groongaドキュメント読書会5
+    * 10/27
+    * Groongaの理解を深める会
+    * 集まってドキュメントを読む
+    * 参加者が気になったところは\n
+      随時Groonga開発者（私）が図解
+
 = 2014/11
 
   * n個のキーを使った\n
@@ -396,9 +442,33 @@ Groonga関連の\n
     * (('note:Fluentdで集めたデータをGroongaに格納する方法'))\n
       (('note:http://qiita.com/groonga/items/5c674be9daf25054c14c'))
 
-= まとめ
+= Groonga関連情報の見つけ方
 
-  * Groonga族の概要
-    * Groongaの特徴
-    * Groonga族とは
-  * Groonga族の最新情報
+  * (('del:Groonga族の概要'))
+  * (('del:Groonga族の最新情報'))
+  * Groonga関連情報の見つけ方
+
+= オンライン（1）
+
+  * http://groonga.org/
+  * メーリングリスト
+    * groonga-dev
+  * Twitter
+    * @groongaをフォロー
+    * 拾ってもらう
+
+= オンライン（2）
+
+  * Qiita
+    * 「groonga」タグをフォロー
+    * Groonga Advent Calendar
+    * (('note:http://qiita.com/advent-calendar/2013/groonga'))
+    * (('note:http://qiita.com/advent-calendar/2014/groonga'))
+
+= オフライン
+
+  * Groongaを囲む夕べ
+    * 11/29（いい肉の日）
+  * ドキュメント読書会
+    * 1,2ヶ月に1回開催
+    * 次回は12/11（木）
