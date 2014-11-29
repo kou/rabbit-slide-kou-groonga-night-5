@@ -4,7 +4,11 @@ Groonga、Mroonga、Rroonga、Droongaなど、Groonga関連プロジェクトの
 
 == ライセンス
 
-...
+CC BY-SA 4.0
+
+原著作者名は以下の通りです。
+
+  * 須藤功平（またはKouhei Sutou）
 
 == 作者向け
 

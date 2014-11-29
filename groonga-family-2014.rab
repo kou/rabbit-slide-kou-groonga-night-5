@@ -26,12 +26,12 @@ Groonga関連の\n
 最新情報を\n
 ざっくり紹介
 
-= リーダブルコードの解説者
+# = リーダブルコードの解説者
 
-  # image
-  # src = images/readable-code.jpeg
-  # relative_height = 95
-  # reflect_ratio = 0.1
+#   # image
+#   # src = ../readable-code.jpeg
+#   # relative_height = 95
+#   # reflect_ratio = 0.1
 
 = Groonga族と私
 
